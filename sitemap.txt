@@ -1,4 +1,8 @@
+http://example.com/2023/06/22/0622/
 http://example.com/2023/06/22/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/
 http://example.com/2023/06/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/
 http://example.com/2023/06/21/hello-world/
+http://example.com/2023/06/20/0619%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/
+http://example.com/2023/06/22/0619%20/
+http://example.com/2023/06/22/0618/
 http://example.com/
