@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-18T14:39:25.284Z</updated>
+  <updated>2023-06-23T13:34:39.845Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,12 +18,32 @@
   
   <entry>
     <title></title>
+    <link href="http://example.com/2023/06/23/0623%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%89%A3/"/>
+    <id>http://example.com/2023/06/23/0623%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%89%A3/</id>
+    <published>2023-06-23T13:36:07.269Z</published>
+    <updated>2023-06-23T13:34:39.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>四数之和：func fourSum(nums []int, target int) (quadruplets [][]int) {<br>    sort.Ints(nums)<br>    n:&#x3D;len(nums)<br>    for i:&#x3D;0;i&lt;n-3&amp;&amp;nums[i]+nums[i+1]+nums[i+2]+nums[i+3]&lt;&#x3D;target;i++{<br>        if i&gt;0&amp;&amp;nums[i] &#x3D;&#x3D;nums[i-1]||nums[i]+nums[n-3]+nums[n-2]+nums[n-1]&lt;target{<br>            continue<br>        }<br>        for j:&#x3D;i+1;j&lt;n-2&amp;&amp;nums[i]+nums[j]+nums[j+1]+nums[j+2]&lt;&#x3D;target;j++{<br>            if j&gt;i+1&amp;&amp;nums[j]&#x3D;&#x3D;nums[j-1]||nums[i]+nums[j]+nums[n-2]+nums[n-1]&lt;target{<br>                continue<br>            }<br>            for left,right:&#x3D;j+1,n-1;left&lt;right;{<br>                if sum:&#x3D;nums[i]+nums[j]+nums[left]+nums[right];sum&#x3D;&#x3D;target{<br>                quadruplets &#x3D; append(quadruplets,[]int{nums[i],nums[j],nums[left],nums[right]})<br>                for left++; left&lt;right&amp;&amp;nums[left]&#x3D;&#x3D;nums[left-1];left++{<br>                }<br>                for right–;left&lt;right&amp;&amp;nums[right]&#x3D;&#x3D;nums[right+1];right–{<br>                }<br>                    }else if sum&lt;target{<br>                        left++<br>                    }else {<br>                        right–<br>                    }<br>            }<br>        }<br>    }<br>    return<br>}<br>核心思路：排序加上双循环</p><p>在确定第一个数之后，如果 nums[i]+nums[i+1]+nums[i+2]+nums[i+3]&gt;target\textit{nums}[i]+\textit{nums}[i+1]+\textit{nums}[i+2]+\textit{nums}[i+3]&gt;\textit{target}nums[i]+nums[i+1]+nums[i+2]+nums[i+3]&gt;target，说明此时剩下的三个数无论取什么值，四数之和一定大于 target\textit{target}target，因此退出第一重循环；<br>在确定第一个数之后，如果 nums[i]+nums[n−3]+nums[n−2]+nums[n−1]&lt;target\textit{nums}[i]+\textit{nums}[n-3]+\textit{nums}[n-2]+\textit{nums}[n-1]&lt;\textit{target}nums[i]+nums[n−3]+nums[n−2]+nums[n−1]&lt;target，说明此时剩下的三个数无论取什么值，四数之和一定小于 target\textit{target}target，因此第一重循环直接进入下一轮，枚举 nums[i+1]\textit{nums}[i+1]nums[i+1]；<br>在确定前两个数之后，如果 nums[i]+nums[j]+nums[j+1]+nums[j+2]&gt;target\textit{nums}[i]+\textit{nums}[j]+\textit{nums}[j+1]+\textit{nums}[j+2]&gt;\textit{target}nums[i]+nums[j]+nums[j+1]+nums[j+2]&gt;target，说明此时剩下的两个数无论取什么值，四数之和一定大于 target\textit{target}target，因此退出第二重循环；<br>在确定前两个数之后，如果 nums[i]+nums[j]+nums[n−2]+nums[n−1]&lt;target\textit{nums}[i]+\textit{nums}[j]+\textit{nums}[n-2]+\textit{nums}[n-1]&lt;\textit{target}nums[i]+nums[j]+nums[n−2]+nums[n−1]&lt;target，说明此时剩下的两个数无论取什么值，四数之和一定小于 target\textit{target}target，因此第二重循环直接进入下一轮，枚举 nums[j+1]\textit{nums}[j+1]nums[j+1]。</p><p>每一种循环枚举到的下标必须大于上一重循环枚举到的下标；</p><p>同一重循环中，如果当前元素与上一个元素相同，则跳过当前元素。</p><p>如果和等于 target\textit{target}target，则将枚举到的四个数加到答案中，然后将左指针右移直到遇到不同的数，将右指针左移直到遇到不同的数；</p><p>如果和小于 target\textit{target}target，则将左指针右移一位；</p><p>如果和大于 target\textit{target}target，则将右指针左移一位。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;四数之和：func fourSum(nums []int, target int) (quadruplets [][]int) {&lt;br&gt;    sort.Ints(nums)&lt;br&gt;    n:&amp;#x3D;len(nums)&lt;br&gt;    for i:&amp;#x3D;0;i&amp;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="http://example.com/2023/06/22/0618/"/>
     <id>http://example.com/2023/06/22/0618/</id>
     <published>2023-06-22T14:45:20.887Z</published>
     <updated>2023-06-18T14:39:25.284Z</updated>
     
-    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#x37;&#x37;&#52;&#x31;&#x38;&#56;&#57;&#x34;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;">&#x37;&#x37;&#52;&#x31;&#x38;&#56;&#57;&#x34;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
+    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#x37;&#x37;&#52;&#49;&#56;&#56;&#57;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#x6d;">&#x37;&#x37;&#52;&#49;&#56;&#56;&#57;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#x6d;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
     
     
       
