@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          604 字
+          603 字
         
       </span>
     
@@ -290,7 +290,7 @@
 <p>npm ls –depth 0</p>
 <p>npm install acorn –save</p>
 <p>编译过程留存<br>go build helloworld.go</p>
-<p><a href="mailto:&#x37;&#x37;&#x34;&#49;&#56;&#x38;&#x39;&#52;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#x37;&#x37;&#x34;&#49;&#56;&#x38;&#x39;&#52;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a><br>zhuzheng359</p>
+<p><a href="mailto:&#x37;&#x37;&#52;&#49;&#56;&#x38;&#x39;&#52;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#x37;&#x37;&#52;&#49;&#56;&#x38;&#x39;&#52;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a><br>zhuzheng359</p>
 <p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p>
 <p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>
 
@@ -497,16 +497,45 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div>西瓜球的博客 | 记录成长的过程</div> 
+    <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    <div>
+      <span id="timeDate">载入天数...</span>
+      <span id="times">载入时分秒...</span>
+      <script>
+      var now = new Date();
+      function createtime(){
+          var grt= new Date("00/00/2023 20:00:00");//此处修改你的建站时间或者网站上线时间
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24;
+          dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+          hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){
+              hnum = "0" + hnum;
+          }
+          minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes);
+          if(String(mnum).length ==1 ){
+                    mnum = "0" + mnum;
+          }
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds);
+          if(String(snum).length ==1 ){
+                    snum = "0" + snum;
+          }
+          document.getElementById("timeDate").innerHTML = "🚀  "+dnum+"&nbsp天";  //此次自定义显示内容
+          document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
+      setInterval("createtime()",250);
+      </script>
     </div>
-  
-  
-  
-  
-</div>
+  </div>
+    div>©2022<a href="/">  blogname</a></div>
+
+
+
+
 
   </footer>
 
