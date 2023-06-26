@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-24T14:14:00.003Z</updated>
+  <updated>2023-06-26T14:57:02.945Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>0623 力扣查找单例字符串</title>
+    <link href="http://example.com/2023/06/26/0623-%E5%8A%9B%E6%89%A3%E6%9F%A5%E6%89%BE%E5%8D%95%E4%BE%8B%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://example.com/2023/06/26/0623-%E5%8A%9B%E6%89%A3%E6%9F%A5%E6%89%BE%E5%8D%95%E4%BE%8B%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2023-06-26T14:53:28.000Z</published>
+    <updated>2023-06-26T14:57:02.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标（下标从 0 开始）。如果 needle 不是 haystack 的一部分，则返回  -1 。</p><p>示例 1：</p><p>输入：haystack &#x3D; “sadbutsad”, needle &#x3D; “sad”<br>输出：0<br>解释：”sad” 在下标 0 和 6 处匹配。<br>第一个匹配项的下标是 0 ，所以返回 0 。<br>示例 2：</p><p>输入：haystack &#x3D; “leetcode”, needle &#x3D; “leeto”<br>输出：-1<br>解释：”leeto” 没有在 “leetcode” 中出现，所以返回 -1 。</p><p>func strStr(haystack string, needle string) int {<br>    m:&#x3D;len(haystack)<br>    n:&#x3D;len(needle)<br>    h:&#x3D;-1<br>    for i:&#x3D;0;i&lt;&#x3D;m-n;i++{<br>        if haystack[i:i+n]&#x3D;&#x3D;needle{<br>            h&#x3D;i<br>            break<br>        }<br>    }</p><pre><code class="hljs">return h</code></pre><p>}</p><p>暴力解法：找出从1到n的所有连续M的字串进行匹配，找出适合的匹配项并break</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标（下标从 0 开始）。如果 needle 不是 haystack 的一部分，则返回  -1 。&lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;p&gt;输入</summary>
+      
+    
+    
+    
+    
+    <category term="力扣算法" scheme="http://example.com/tags/%E5%8A%9B%E6%89%A3%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>0624 力扣判断括号组合方式</title>
