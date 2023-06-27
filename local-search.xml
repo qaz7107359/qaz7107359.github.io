@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>0627 力扣算法两数相除</title>
+    <link href="/2023/06/27/0627-%E5%8A%9B%E6%89%A3%E7%AE%97%E6%B3%95%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/"/>
+    <url>/2023/06/27/0627-%E5%8A%9B%E6%89%A3%E7%AE%97%E6%B3%95%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/</url>
+    
+    <content type="html"><![CDATA[<ol start="29"><li>两数相除<br>中等<br>1.1K<br>相关企业<br>给你两个整数，被除数 dividend 和除数 divisor。将两数相除，要求 不使用 乘法、除法和取余运算。</li></ol><p>整数除法应该向零截断，也就是截去（truncate）其小数部分。例如，8.345 将被截断为 8 ，-2.7335 将被截断至 -2 。</p><p>返回被除数 dividend 除以除数 divisor 得到的 商 。</p><p>注意：假设我们的环境只能存储 32 位 有符号整数，其数值范围是 [−231,  231 − 1] 。本题中，如果商 严格大于 231 − 1 ，则返回 231 − 1 ；如果商 严格小于 -231 ，则返回 -231 。</p><p>func divide(dividend int, divisor int) int {<br>        count:&#x3D;0<br>        fu:&#x3D;1<br>        if dividend&lt;0{<br>            fu&#x3D;-fu<br>            dividend&#x3D;dividend<em>fu<br>        }<br>        if divisor&lt;0{<br>            if fu&lt;0{<br>                divisor&#x3D;divisor*fu<br>                fu&#x3D;-fu<br>            }else{<br>                fu&#x3D;-fu<br>                divisor&#x3D;divisor*fu<br>            }<br>        }<br>        for dividend&gt;&#x3D;divisor{<br>            dividend&#x3D;dividend-divisor<br>            count++<br>        }<br>        return count</em>fu<br>}</p><p>这道题需要判断符号位，我们先设置符号位通过判断正负得到最终正确的结果，使用连续减法的思路来找到count的值从而判断结果</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>力扣算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>0623 力扣查找单例字符串</title>
     <link href="/2023/06/26/0623-%E5%8A%9B%E6%89%A3%E6%9F%A5%E6%89%BE%E5%8D%95%E4%BE%8B%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <url>/2023/06/26/0623-%E5%8A%9B%E6%89%A3%E6%9F%A5%E6%89%BE%E5%8D%95%E4%BE%8B%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
