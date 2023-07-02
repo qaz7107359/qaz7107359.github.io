@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>0702力扣解数独</title>
+    <link href="/2023/07/02/0702%E5%8A%9B%E6%89%A3%E8%A7%A3%E6%95%B0%E7%8B%AC/"/>
+    <url>/2023/07/02/0702%E5%8A%9B%E6%89%A3%E8%A7%A3%E6%95%B0%E7%8B%AC/</url>
+    
+    <content type="html"><![CDATA[<p>请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。</p><p>数字 1-9 在每一行只能出现一次。<br>数字 1-9 在每一列只能出现一次。<br>数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。（请参考示例图）</p><p>注意：</p><p>一个有效的数独（部分已被填充）不一定是可解的。<br>只需要根据以上规则，验证已经填入的数字是否有效即可。<br>空白格用 ‘.’ 表示。</p><p>func isValidSudoku(board [][]byte) bool {<br>    var rows, columns [9][9]int<br>    var subboxes [3][3][9]int<br>    for i, row :&#x3D; range board {<br>        for j, c :&#x3D; range row {<br>            if c &#x3D;&#x3D; ‘.’ {<br>                continue<br>            }<br>            index :&#x3D; c - ‘1’<br>            rows[i][index]++<br>            columns[j][index]++<br>            subboxes[i&#x2F;3][j&#x2F;3][index]++<br>            if rows[i][index] &gt; 1 || columns[j][index] &gt; 1 || subboxes[i&#x2F;3][j&#x2F;3][index] &gt; 1 {<br>                return false<br>            }<br>        }<br>    }<br>    return true<br>}</p><p>核心思路在于怎么存储1到9的数值，其中value-‘1’是用来表示int类型数值的方式</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>629</title>
     <link href="/2023/06/29/0629/"/>
     <url>/2023/06/29/0629/</url>
@@ -91,7 +104,7 @@
     <link href="/2023/06/22/0618/"/>
     <url>/2023/06/22/0618/</url>
     
-    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#x37;&#55;&#x34;&#x31;&#56;&#56;&#57;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;">&#x37;&#55;&#x34;&#x31;&#56;&#56;&#57;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
+    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#55;&#55;&#x34;&#x31;&#x38;&#x38;&#x39;&#52;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#55;&#55;&#x34;&#x31;&#x38;&#x38;&#x39;&#52;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
     
     
     
