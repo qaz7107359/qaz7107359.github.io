@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>0705力扣算法经典题</title>
+    <link href="/2023/07/05/0705%E5%8A%9B%E6%89%A3%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E9%A2%98/"/>
+    <url>/2023/07/05/0705%E5%8A%9B%E6%89%A3%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<ol start="2750"><li>将数组划分成若干好子数组的方式<br>提示<br>中等<br>6<br>相关企业<br>给你一个二元数组 nums 。</li></ol><p>如果数组中的某个子数组 恰好 只存在 一 个值为 1 的元素，则认为该子数组是一个 好子数组 。</p><p>请你统计将数组 nums 划分成若干 好子数组 的方法数，并以整数形式返回。由于数字可能很大，返回其对 109 + 7 取余 之后的结果。</p><p>子数组是数组中的一个连续 非空 元素序列。</p><p>示例 1：</p><p>输入：nums &#x3D; [0,1,0,0,1]<br>输出：3<br>解释：存在 3 种可以将 nums 划分成若干好子数组的方式：</p><ul><li>[0,1] [0,0,1]</li><li>[0,1,0] [0,1]</li><li>[0,1,0,0] [1]</li></ul><p>func numberOfGoodSubarraySplits(nums []int) int {<br>    var dp []int<br>    var mp []int<br>    mod :&#x3D;int(1e9+7)<br>    for i:&#x3D;0;i&lt;len(nums);i++{<br>        if nums[i]&#x3D;&#x3D;1{<br>            dp&#x3D;append(dp,i)<br>        }<br>    }<br>     if len(dp)&#x3D;&#x3D;1{<br>            return 1<br>            }else if len(dp)&#x3D;&#x3D;2{<br>                return dp[1]-dp[0]<br>            }else if len(dp)&#x3D;&#x3D;0{<br>                return 0<br>            }<br>    fmt.Println(dp)<br>    for j:&#x3D;0;j&lt;len(dp)-1;j++{<br>        mp&#x3D;append(mp,dp[j+1]-dp[j])<br>    }<br>    a:&#x3D;mp[0]<br>    for k:&#x3D;1;k&lt;len(mp);k++{<br>        a&#x3D;a*mp[k]%mod<br>    }<br>    return a<br>}</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>力扣算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>力扣新算法</title>
+    <link href="/2023/07/04/%E5%8A%9B%E6%89%A3%E6%96%B0%E7%AE%97%E6%B3%95/"/>
+    <url>/2023/07/04/%E5%8A%9B%E6%89%A3%E6%96%B0%E7%AE%97%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>0702力扣解数独</title>
     <link href="/2023/07/02/0702%E5%8A%9B%E6%89%A3%E8%A7%A3%E6%95%B0%E7%8B%AC/"/>
     <url>/2023/07/02/0702%E5%8A%9B%E6%89%A3%E8%A7%A3%E6%95%B0%E7%8B%AC/</url>
@@ -104,7 +136,7 @@
     <link href="/2023/06/22/0618/"/>
     <url>/2023/06/22/0618/</url>
     
-    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#55;&#55;&#x34;&#x31;&#x38;&#x38;&#x39;&#52;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#55;&#55;&#x34;&#x31;&#x38;&#x38;&#x39;&#52;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
+    <content type="html"><![CDATA[<p>go 去首尾 s&#x3D;s.TremSpace()<br>处理符号位 定位1 或者-1 用乘法赋予前缀<br>字符串转换整数<br>abs：&#x3D;0<br>abs：&#x3D;abs<em>10+int（</em>**）<br>每次循环乘以10拿到value</p><p>公共子字符串前缀<br>逐个比较，抓取每个字符串的最大公共字串长度做对比<br>纵向比对，</p><p>github 密码 ：zhuzheng359</p><p>分布式技术<br>消息队列<br>多进程<br>后端开发</p><p>npm ls –depth 0</p><p>npm install acorn –save</p><p>编译过程留存<br>go build helloworld.go</p><p><a href="mailto:&#x37;&#55;&#52;&#49;&#x38;&#56;&#x39;&#52;&#x40;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#x37;&#55;&#52;&#49;&#x38;&#56;&#x39;&#52;&#x40;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a><br>zhuzheng359</p><p>input :&#x3D; bufio.NewScanner(os.Stdio)<br>input.Text()</p><p>%d int变量<br>%x, %o, %b 分别为16进制，8进制，2进制形式的int<br>%f, %g, %e 浮点数： 3.141593 3.141592653589793 3.141593e+00<br>%t 布尔变量：true 或 false<br>%c rune (Unicode码点)，Go语言里特有的Unicode字符类型<br>%s string<br>%q 带双引号的字符串 “abc” 或 带单引号的 rune ‘c’<br>%v 会将任意变量以易读的形式打印出来<br>%T 打印变量的类型<br>%% 字符型百分比标志（%符号本身，没有其他操作）</p>]]></content>
     
     
     
